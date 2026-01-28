@@ -64,3 +64,8 @@ docs/_build/
 # PyInstaller
 *.manifest
 *.spec
+
+# Executables
+*.exe
+*.bat
+*.cmd

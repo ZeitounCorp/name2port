@@ -1,0 +1,69 @@
+[build-system]
+requires = ["hatchling>=1.21"]
+build-backend = "hatchling.build"
+
+[project]
+name = "name2port"
+dynamic = ["version"]
+description = "Deterministic name-to-free-port CLI tool"
+readme = { file = "README.md", content-type = "text/markdown" }
+requires-python = ">=3.8"
+license = "MIT"
+authors = [{ name = "Lenny Zeitoun" }]
+keywords = [
+  "networking",
+  "ports",
+  "devtools",
+  "cli",
+  "utilities",
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Environment :: Console",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: System :: Networking",
+  "Topic :: Utilities",
+]
+dependencies = []
+
+[project.optional-dependencies]
+psutil = ["psutil>=5.9"]
+dev = [
+  "black>=24.4",
+  "ruff>=0.5",
+  "pytest>=8.3",
+  "psutil>=5.9",
+]
+
+[project.scripts]
+name2port = "name2port.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/ZeitounCorp/name2port"
+Repository = "https://github.com/ZeitounCorp/name2port"
+Issues = "https://github.com/ZeitounCorp/name2port/issues"
+
+[tool.hatch.version]
+path = "name2port/__init__.py"
+
+[tool.hatch.build.targets.wheel]
+packages = ["name2port"]
+
+[tool.hatch.build.targets.sdist]
+include = [
+  "name2port",
+  "name_to_free_port.py",
+  "install.sh",
+  "README.md",
+  "LICENSE",
+]
