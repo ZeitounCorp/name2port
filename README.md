@@ -98,7 +98,7 @@ Put `cli.py` in a directory on PATH (e.g., `C:\tools\`) and run `py cli.py <name
 
 Without psutil, the tool still works but has limited process detection.
 
-Install:
+**Install:**
 
 **pip:**
 
@@ -175,19 +175,19 @@ Listener(s):
 
 By default, when run interactively, **name2port** will ask whether to copy the resulting port to your clipboard.
 
-Copy without prompting:
+**Copy without prompting:**
 
 ```bash
 name2port bento-pdf --copy
 ```
 
-Disable copy and disable prompt:
+**Disable copy and disable prompt:**
 
 ```bash
 name2port bento-pdf --no-copy
 ```
 
-Linux clipboard tools that may be required:
+**Linux clipboard tools that may be required:**
 
 ```bash
 sudo apt install wl-clipboard   # Wayland
